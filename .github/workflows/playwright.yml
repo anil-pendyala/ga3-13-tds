@@ -1,0 +1,28 @@
+name: Playwright Table Sum
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run-playwright:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      # IMPORTANT: Email step (required by assignment)
+      - name: Run script - 23f3003847@ds.study.iitm.ac.in
+        run: node sum.js
