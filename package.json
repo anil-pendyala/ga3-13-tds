@@ -1,0 +1,12 @@
+{
+  "name": "tds-playwright",
+  "version": "1.0.0",
+  "description": "Sum table values using Playwright",
+  "main": "sum.js",
+  "scripts": {
+    "start": "node sum.js"
+  },
+  "dependencies": {
+    "playwright": "^1.42.0"
+  }
+}
